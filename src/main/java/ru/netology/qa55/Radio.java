@@ -1,4 +1,5 @@
 package ru.netology.qa55;
+
 public class Radio {
     private int currentRadioStationNumber; // поле Текущий номер радиостанции
     private int currentVolume; // поле Громкоть звука

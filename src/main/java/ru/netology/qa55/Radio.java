@@ -3,7 +3,7 @@ package ru.netology.qa55;
 public class Radio {
     private int currentRadioStationNumber; // поле Текущий номер радиостанции
     private int currentVolume; // поле Громкоть звука
-    private int maxRadio = 9;
+    private int maxRadio = 10; // переменная maxRadio - максимальное кол-во станций радио по умолчанию
 
     // констурктор для создания радиостанций по умолчанию = 10
     public Radio() {
@@ -33,7 +33,7 @@ public class Radio {
     }
 
 
-    // величивает номер текущей радиостанции от 0 до 9 если текущий номер меньше 9, иначе ставит 0 для кол-ва станций по умоланию 10
+    // увеличивает номер текущей радиостанции от 0 до 9 если текущий номер меньше 9, иначе ставит 0 для кол-ва станций по умоланию 10
 
     public void NextRadioStationNumber() {
         if (currentRadioStationNumber < maxRadio) {

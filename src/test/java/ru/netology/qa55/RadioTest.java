@@ -17,12 +17,12 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test //10 станций по умолчанию
-    public void shouldByDefaultMaxRadio() {
-        Radio max = new Radio();
-        max.getMaxRadio();
-        //      System.out.println(max.getMaxRadio());
-    }
+ //   @Test //10 станций по умолчанию
+  ///  public void shouldByDefaultMaxRadio() {
+  //      Radio max = new Radio();
+  //      max.getMaxRadio();
+       //      System.out.println(max.getMaxRadio());
+  //  }
 
     @ParameterizedTest // включаем номер станции явным образом при 10 станциях по умолчанию
     @CsvFileSource(files = "src/test/resources/CurrentRadioStationNumberByDef.csv")
@@ -40,7 +40,7 @@ public class RadioTest {
     @CsvFileSource(files = "src/test/resources/CurrentRadioStationNumber.csv")
 
     public void shouldCurrentRadioStationNumber(int expected, int CurrentRadioStationNumber) {
-        Radio number = new Radio(99);
+        Radio number = new Radio(100);
         number.setCurrentRadioStationNumber(CurrentRadioStationNumber);
 
         int actual = number.getCurrentRadioStationNumber();
@@ -78,7 +78,7 @@ public class RadioTest {
     @CsvFileSource(files = "src/test/resources/PrevRadioStationNumber.csv")
 
     public void shouldPrevRadioStationNumber(int expected, int CurrentRadioStationNumber) {
-        Radio number = new Radio(49);
+        Radio number = new Radio(50);
         number.setCurrentRadioStationNumber(CurrentRadioStationNumber);
         number.PrevRadioStationNumber();
 

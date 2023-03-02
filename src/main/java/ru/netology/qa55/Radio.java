@@ -3,14 +3,16 @@ package ru.netology.qa55;
 public class Radio {
     private int currentRadioStationNumber; // поле Текущий номер радиостанции
     private int currentVolume; // поле Громкоть звука
-    private int maxRadio = 9; // переменная maxRadio - максимальное кол-во станций радио по умолчанию по условию их 10 - первая 0, последняя 9
+    private int maxRadio; // переменная maxRadio - максимальное кол-во станций радио по умолчанию по условию их 10 - первая 0, последняя 9
 
     // констурктор для создания радиостанций по умолчанию = 10
     public Radio() {
+        maxRadio = 9;
     }
 
     // констурктор для создания радиостанций количество задается пользователем
     public Radio(int maxRadio) {
+
         this.maxRadio = (maxRadio-1);
     }
 
